@@ -45,7 +45,7 @@ def get_telegram_id_by_company_id(sheet, company_id):
 def setup_google_sheets(sheet_index=0):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     creds = ServiceAccountCredentials.from_json_keyfile_name(
-        "/home/klim-petrov/projects/tgbot/credentials.json", scope
+        "/root/smartTRAN/credentials.json", scope
     )
     client = gspread.authorize(creds)
     sheet = client.open_by_key("1CoDQJn0T_scUV7ZsbYU8x2nZTzu_F9CBrculeQIG2KA").get_worksheet(sheet_index)
